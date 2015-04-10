@@ -1,9 +1,6 @@
 {
-  "name": "ember-cli-test",
-  "root": "./dist",
-  "routes": {
-    "/tests": "tests/index.html",
-    "/tests/**": "tests/index.html",
-    "/**": "index.html"
-  }
+  "name": "ember-cli-maltadz",
+  "root": "dist",
+  "clean_urls": true,
+  "error_page": "n"
 }
