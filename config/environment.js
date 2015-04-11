@@ -4,7 +4,6 @@ module.exports = function (environment) {
     var ENV = {
         modulePrefix: 'ember-cli-test',
         environment: environment,
-        firebase: 'https://amber-inferno-6208.firebaseio.com/',
         baseURL: '/',
         locationType: 'auto',
         EmberENV: {
@@ -17,7 +16,7 @@ module.exports = function (environment) {
         'default-src': "'none'",
             'script-src': "'self'",
             'font-src': "'self'",
-            'connect-src': "'self' *.firebaseio.com wss://s-dal5-nss-34.firebaseio.com",
+            'connect-src': "'self' wss://*.firebaseio.com",
             'img-src': "'self'",
             'style-src': "'self'",
             'media-src': "'self'"
@@ -32,9 +31,10 @@ module.exports = function (environment) {
     if (environment === 'development') {
         // ENV.APP.LOG_RESOLVER = true;
         // ENV.APP.LOG_ACTIVE_GENERATION = true;
-        // ENV.APP.LOG_TRANSITIONS = true;
+        ENV.APP.LOG_TRANSITIONS = true;
         // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-        // ENV.APP.LOG_VIEW_LOOKUPS = true;
+        ENV.APP.LOG_VIEW_LOOKUPS = true;
+        ENV.firebase = 'https://maltadz-dev.firebaseio.com/';
     }
 
     if (environment === 'test') {
@@ -47,10 +47,11 @@ module.exports = function (environment) {
         ENV.APP.LOG_VIEW_LOOKUPS = false;
 
         ENV.APP.rootElement = '#ember-testing';
+        ENV.firebase = 'https://maltadz-dev.firebaseio.com/';
     }
 
     if (environment === 'production') {
-
+        ENV.firebase = 'https://maltadz-production.firebaseio.com/';
     }
 
     return ENV;
