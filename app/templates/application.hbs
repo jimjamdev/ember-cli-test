@@ -6,7 +6,8 @@
                 {{/link-to}}
             <ul class="nav navbar-nav">
                 <li>{{#link-to 'index'}}Home{{/link-to}}</li>
-                <li>{{#link-to 'listing'}}Listings{{/link-to}}</li>
+                <li>{{#link-to 'listings'}}Listings{{/link-to}}</li>
+                <li>{{#link-to 'listings.new'}}Add Listing{{/link-to}}</li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>{{#if session.isWorking}}
@@ -27,5 +28,5 @@
 
     {{outlet}}
 
-    <footer>Copyright &copy; 2015 Ian Jamieson</footer>
+    <footer>Copyright &copy; 2015 Ian Jamieson {{todaysDate}}</footer>
 </div>

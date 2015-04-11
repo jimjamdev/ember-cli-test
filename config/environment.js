@@ -4,7 +4,7 @@ module.exports = function (environment) {
     var ENV = {
         modulePrefix: 'ember-cli-test',
         environment: environment,
-        firebase: 'https://https://amber-inferno-6208.firebaseio.com/',
+        firebase: 'https://amber-inferno-6208.firebaseio.com/',
         baseURL: '/',
         locationType: 'auto',
         EmberENV: {
@@ -12,6 +12,15 @@ module.exports = function (environment) {
                 // Here you can enable experimental features on an ember canary build
                 // e.g. 'with-controller': true
             }
+        },
+        contentSecurityPolicy: {
+        'default-src': "'none'",
+            'script-src': "'self'",
+            'font-src': "'self'",
+            'connect-src': "'self' *.firebaseio.com wss://s-dal5-nss-34.firebaseio.com",
+            'img-src': "'self'",
+            'style-src': "'self'",
+            'media-src': "'self'"
         },
 
         APP: {
