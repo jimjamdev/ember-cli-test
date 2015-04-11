@@ -1,2 +1,9 @@
 <h1>Home</h1>
-{{outlet}}
+
+<ul class="nav nav-pills nav-stacked">
+    {{#each listing in model}}
+        <li>{{listing.name}} - {{listing.body}}</li>
+    {{/each}}
+</ul>
+
+

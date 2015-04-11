@@ -1,4 +1,6 @@
 <h3>New Listing</h3>
-{{input type="text" placeholder="name" value=name class="text-input"}}
-{{input type="text" placeholder="Description" value=body class="body-input"}}
+<form>
+{{input type="text" placeholder="name" value=name class="text-input" required="required"}}
+{{input type="text" placeholder="Description" value=body class="body-input" required="required"}}
 <button {{action 'addListing'}} class="btn">Add Listing</button>
+</form>
