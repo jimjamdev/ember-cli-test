@@ -5,5 +5,6 @@ export default DS.Model.extend({
     body: DS.attr('string'),
     price: DS.attr('string'),
     posted: DS.attr('date'),
-    active: DS.attr('boolean')
+    active: DS.attr('boolean'),
+    slug: DS.attr('string')
 });

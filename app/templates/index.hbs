@@ -2,8 +2,6 @@
 
 <ul class="nav nav-pills nav-stacked">
     {{#each listing in model}}
-        <li>{{listing.name}} - {{listing.body}}</li>
+        <li>{{#link-to 'listing' listing}}{{listing.name}} - {{listing.body}} <span class="listing-posted">{{listing.posted}}</span>{{/link-to}}</li>
     {{/each}}
 </ul>
-
-

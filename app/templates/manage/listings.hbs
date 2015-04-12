@@ -3,6 +3,6 @@
 
 <ul class="nav nav-pills nav-stacked">
     {{#each listing in model}}
-        <li>{{listing.name}} - {{listing.body}} - &euro;{{listing.price}} <span class="listing-posted">{{listing.posted}}</span></li>
+        <li>{{#link-to 'manage.edit' listing}}{{listing.name}}{{/link-to}} - {{listing.body}} - &euro;{{listing.price}} <span class="listing-posted">{{listing.posted}}</span> <button class="listing-remove">Edit</button> <button {{action 'removeListing' this}} class="btn">Remove</button></li>
     {{/each}}
 </ul>
