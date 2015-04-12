@@ -11,6 +11,10 @@ var Router = Ember.Router.extend({
 export default Router.map(function () {
   this.resource('listings', function() {
       this.route("listing");
+  });
+  this.resource('manage', function() {
+      this.route("login");
+      this.route("listings");
       this.route("new");
   });
 });

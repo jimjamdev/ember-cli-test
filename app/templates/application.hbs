@@ -7,16 +7,16 @@
             <ul class="nav navbar-nav">
                 <li>{{#link-to 'index'}}Home{{/link-to}}</li>
                 <li>{{#link-to 'listings'}}Listings{{/link-to}}</li>
-                <li>{{#link-to 'listings.new'}}Add Listing{{/link-to}}</li>
+                <li>{{#link-to 'manage.new'}}Add Listing{{/link-to}}</li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>{{#if session.isWorking}}
                     One sec while we get you signed in...
                 {{else}}
                     {{error}}
-                    <a href="#">
+                    {{#link-to 'manage'}}
                         Log-in
-                    </a>
+                    {{/link-to}}
                 {{/if}}</li>
             </ul>
         </div>

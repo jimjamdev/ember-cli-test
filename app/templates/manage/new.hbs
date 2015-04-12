@@ -1,0 +1,13 @@
+<h3>Create a new listing</h3>
+<form>
+    <div class="form-group">
+        {{input type="text" placeholder="name" value=name class="text-input" required="required"}}
+    </div>
+    <div class="form-group">
+        {{textarea placeholder="Description" value=body class="body-input" required="required"}}
+    </div>
+    <div class="form-group">
+        {{input type="text" placeholder="Price" value=price class="price-input" required="required"}}
+    </div>
+    <button {{action 'addListing'}} class="btn">Add Listing</button>
+</form>
