@@ -4,5 +4,7 @@
 <ul class="nav nav-pills nav-stacked">
     {{#each listing in model}}
         <li>{{#link-to 'manage.edit' listing}}{{listing.name}} - {{listing.body}} - &euro;{{listing.price}} <span class="listing-posted">{{listing.posted}}</span>  <button {{action 'removeListing' listing}} class="btn">Remove</button>{{/link-to}}</li>
+    {{else}}
+        <li>You have 0 listings. {{#link-to 'manage.new'}}Add your first listing{{/link-to}} to get started.</li>
     {{/each}}
 </ul>

@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
+    // Delete Listing
     actions: {
         removeListing: function(listing) {
             var controller = this;
