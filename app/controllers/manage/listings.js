@@ -1,5 +1,11 @@
 import Ember from 'ember';
 
+/*export default Ember.ArrayController.extend({
+    sortProperties: ['posted'],
+    sortAscending: false
+});*/
+
+
 export default Ember.ObjectController.extend({
     // Delete Listing
     actions: {

@@ -1,7 +1,7 @@
 <h1>Home</h1>
 
 <ul class="nav nav-pills nav-stacked">
-    {{#each listing in model}}
-        <li>{{#link-to 'listing' listing}}{{listing.name}} - {{listing.body}} <span class="listing-posted">{{listing.posted}}</span>{{/link-to}}</li>
+    {{#each listing in controller}}
+        <li>{{#link-to 'listing' listing}}{{listing.name}} &euro;{{listing.price}} - {{listing.body}} <span class="listing-posted">{{listing.posted}}</span>{{/link-to}}</li>
     {{/each}}
 </ul>
