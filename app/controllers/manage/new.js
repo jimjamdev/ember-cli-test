@@ -9,12 +9,11 @@ export default Ember.Controller.extend({
                 price: this.get('price'),
                 posted: new Date(),
                 active: true,
-                enhanced: false,
+                featured: false,
                 slug: this.get('name').dasherize().decamelize()
             });
             newListing.save();
-            this.transitionTo('manage.listings');
-            /*this.setProperties({
+            this.setProperties({
                 name: '',
                 body: '',
                 price: '',
@@ -22,7 +21,8 @@ export default Ember.Controller.extend({
                 active: '',
                 enhanced: '',
                 slug: ''
-            });*/
+            });
+            this.transitionTo('manage.listings');
         }
     }
 });
