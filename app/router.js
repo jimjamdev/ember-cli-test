@@ -6,11 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function () {
-    this.route('listing', {path: '/listing/:slug'});
+    this.route('listing', {path: '/listing/:listing_id'});
     this.resource('manage', function () {
-        this.route("login");
         this.route("listings");
         this.route("new");
         this.route('edit', {path: ':listing_id'});
     });
+    this.route("login");
 });

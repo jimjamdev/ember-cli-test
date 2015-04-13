@@ -1,0 +1,13 @@
+<h3>Login</h3>
+
+<form {{action 'authenticate' on='submit'}}>
+    <div class="field-group">
+    <label for="identification">Login</label>
+    {{input id='identification' placeholder='Enter Login' value=identification}}
+        </div>
+    <div class="field-group">
+    <label for="password">Password</label>
+    {{input id='password' placeholder='Enter Password' type='password' value=password}}
+    </div>
+    <button type="submit">Login</button>
+</form>

@@ -1,6 +1,5 @@
 import Ember from 'ember';
 
-export default Ember.Route.extend({
-    // Meta Title
-    titleToken: 'My Listings'
-});
+import AuthenticatedRouteMixin from 'simple-auth/mixins/authenticated-route-mixin';
+
+export default Ember.Route.extend(AuthenticatedRouteMixin);

@@ -18,13 +18,10 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li>{{#if session.isWorking}}
-                    One sec while we get you signed in...
+                <li>{{#if session.isAuthenticated}}
+                    <a {{ action 'invalidateSession' }}>Logout</a>
                 {{else}}
-                    {{error}}
-                    {{#link-to 'manage'}}
-                        Log-in
-                    {{/link-to}}
+                    {{#link-to 'login'}}Login{{/link-to}}
                 {{/if}}</li>
             </ul>
         </div><!-- /.navbar-collapse -->
