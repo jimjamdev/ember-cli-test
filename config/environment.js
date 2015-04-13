@@ -54,7 +54,7 @@ module.exports = function (environment) {
         ENV.APP.rootElement = '#ember-testing';
         ENV.firebase = 'https://maltadz-dev.firebaseio.com/';
         ENV['simple-auth'] = {
-            store: 'simple-auth-session-store:ephemeral'
+            authorizer: 'simple-auth-authorizer:oauth2-bearer'
         };
     }
 
