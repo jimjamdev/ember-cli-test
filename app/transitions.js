@@ -1,5 +1,5 @@
 export default function(){
     this.transition(
-        this.use('toUp')
+        this.use('toLeft')
     );
 }
