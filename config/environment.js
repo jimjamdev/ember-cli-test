@@ -16,9 +16,9 @@ module.exports = function (environment) {
         'default-src': "'none'",
             'script-src': "'self'",
             'font-src': "'self'",
-            'connect-src': "'self' wss://*.firebaseio.com",
+            'connect-src': "'self' wss://*.firebaseio.com http://*.firebaseio.com",
             'img-src': "'self'",
-            'style-src': "'self'",
+            'style-src': "'self' 'unsafe-inline'",
             'media-src': "'self'"
         },
 
@@ -28,10 +28,7 @@ module.exports = function (environment) {
         }
     };
 
-    // Authentication
-    ENV['simple-auth-oauth2'] = {
-        serverTokenRevocationEndpoint: '/revoke'
-    };
+
 
     if (environment === 'development') {
         ENV.APP.LOG_RESOLVER = true;
@@ -53,9 +50,7 @@ module.exports = function (environment) {
 
         ENV.APP.rootElement = '#ember-testing';
         ENV.firebase = 'https://maltadz-dev.firebaseio.com/';
-        ENV['simple-auth'] = {
-            authorizer: 'simple-auth-authorizer:oauth2-bearer'
-        };
+
     }
 
     if (environment === 'production') {
