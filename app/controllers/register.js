@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 
 export default Ember.Controller.extend({
-    /*actions: {
+    actions: {
         createUser: function() {
             var newUser = this.store.createRecord('user', {
                 firstName: this.get('firstName'),
@@ -19,5 +19,5 @@ export default Ember.Controller.extend({
             });
             this.transitionTo('manage');
         }
-    }*/
+    }
 });
