@@ -9,7 +9,7 @@
     </div>
 {{/if}}
 {{! login form; the fields must be named "identification" and "password"; the controller action is "authenticate" }}
-<form {{action 'login' on='submit'}}>
+<form {{action 'login' on='submit'}} class="well">
     <div class="form-group">
         <label for="identification">Email address</label>
         {{input value=identification placeholder='email@example.com' class='form-control'}}

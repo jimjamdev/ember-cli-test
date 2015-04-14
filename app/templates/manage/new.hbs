@@ -1,13 +1,20 @@
 <h3>Create a new listing</h3>
-<form>
+<form class="well">
     <div class="form-group">
-        {{input type="text" placeholder="name" value=name class="text-input" required="required"}}
+        {{input type="text" placeholder="name" value=name class="form-control" required="required"}}
     </div>
     <div class="form-group">
-        {{textarea placeholder="Description" value=body class="body-input" required="required"}}
+        {{textarea placeholder="Description" value=body class="form-control" required="required"}}
     </div>
     <div class="form-group">
-        {{input type="text" placeholder="Price" value=price class="price-input" required="required"}}
+        {{input type="text" placeholder="Price" value=price class="form-control" required="required"}}
     </div>
     <button {{action 'addListing'}} class="btn">Add Listing</button>
 </form>
+
+<!-- Preview -->
+<div id="body">
+{{#if name}}<h3>{{name}}</h3>{{/if}}
+{{#if body}}{{body}}{{/if}}
+{{#if price}}<h4>&euro;{{price}}</h4>{{/if}}
+</div>
