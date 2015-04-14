@@ -18,11 +18,12 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li>{{#if session.isAuthenticated}}
-                    <a {{ action 'invalidateSession' }}>Logout</a>
+                {{#if session.isAuthenticated}}
+                <li> <a {{ action 'invalidateSession' }}>Logout</a></li>
                 {{else}}
-                    {{#link-to 'login'}}Login{{/link-to}}
-                {{/if}}</li>
+                   <li> {{#link-to 'login'}}Login{{/link-to}}</li>
+                    <li> {{#link-to 'register'}}Register{{/link-to}}</li>
+                {{/if}}
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
