@@ -14,5 +14,8 @@
     "qunit": "~1.17.1",
     "firebase": "^2.1.0",
     "bootstrap-sass-official": "~3.3.4"
+  },
+  "devDependencies": {
+    "firebase-simple-login": "~1.6.4"
   }
 }
