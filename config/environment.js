@@ -36,7 +36,7 @@ module.exports = function (environment) {
         ENV.APP.LOG_TRANSITIONS = true;
         ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
         ENV.APP.LOG_VIEW_LOOKUPS = true;
-        ENV.firebase = 'https://maltadz-dev.firebaseio.com/';
+        ENV.firebase = 'https://maltadz-production.firebaseio.com/';
     }
 
     if (environment === 'test') {
@@ -49,7 +49,7 @@ module.exports = function (environment) {
         ENV.APP.LOG_VIEW_LOOKUPS = false;
 
         ENV.APP.rootElement = '#ember-testing';
-        ENV.firebase = 'https://maltadz-dev.firebaseio.com/';
+        ENV.firebase = 'https://maltadz-production.firebaseio.com/';
 
     }
 

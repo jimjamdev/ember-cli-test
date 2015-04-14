@@ -10,7 +10,7 @@
 {{/if}}
 {{! login form; the fields must be named "identification" and "password"; the controller action is "authenticate" }}
 <form {{action 'login' on='submit'}} class="well">
-    <div class="form-group">
+   <!-- <div class="form-group">
         <label for="identification">Email address</label>
         {{input value=identification placeholder='email@example.com' class='form-control'}}
     </div>
@@ -18,5 +18,9 @@
         <label for="password">Password</label>
         {{input value=password placeholder='Enter Password' class='form-control' type='password'}}
     </div>
-    <button type="submit" class="btn btn-default">Login</button>
+    <button type="submit" class="btn btn-default">Login</button>-->
+    <button {{action "login"}} class="btn btn-default">
+        {{"google"}}
+        Sign in with Google
+    </button>
 </form>

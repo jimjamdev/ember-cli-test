@@ -2,9 +2,14 @@ import Ember from 'ember';
 
 
 export default Ember.Controller.extend({
-   /* actions: {
+    actions: {
         login: function() {
-            this.transitionTo('manage');
+            var controller = this;
+            controller.get("session").login().then(function(user) {
+                // Persist your users details.
+            }, function() {
+                // User rejected authentication request
+            });
         }
-    }*/
+    }
 });

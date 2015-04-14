@@ -18,11 +18,11 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
+                <li>{{google.displayName}}</li>
                 {{#if session.isAuthenticated}}
-                <li> <a {{ action 'invalidateSession' }}>Logout</a></li>
+                <li> <a {{ action 'logout' }}>Logout</a></li>
                 {{else}}
                    <li> {{#link-to 'login'}}Login{{/link-to}}</li>
-                    <li> {{#link-to 'register'}}Register{{/link-to}}</li>
                 {{/if}}
             </ul>
         </div><!-- /.navbar-collapse -->
