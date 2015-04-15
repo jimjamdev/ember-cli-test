@@ -1,0 +1,36 @@
+.categories {
+    @extend %reset-list;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    li {
+        @extend %reset-list;
+        padding: 0.5rem;
+        min-height: 150px;
+        flex-shrink: 1;
+        flex-grow: 0;
+        flex-basis: 100%;
+        @media screen and (min-width: 640px) {
+            flex-basis: 50%;
+        }
+        @media screen and (min-width: 960px) {
+            flex-basis: 25%;
+        }
+        .item {
+            background: #555;
+            display: block;
+            padding: 1rem;
+            text-align: center;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                background: #333;
+            }
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}

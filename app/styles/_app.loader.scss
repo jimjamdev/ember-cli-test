@@ -1,26 +1,33 @@
-body {
-    &:before {
-        position: absolute;
-        display: block;
-        width: 150px;
-        height: 50px;
-        margin-left: -75px;
-        margin-top: -25px;
-        background-color: black;
-        border-radius: 3px;
-        //text-align: center;
-        padding: 1em;
-        color: #fff;
-        left: 50%;
-        right: 0;
-        top: 50%;
-        bottom: 0;
-        content: "Loading...";
+@keyframes load {
+    0% {
+        width: 0vw;
+    }
+    100% {
+        width: 100vw;
     }
 }
+
+body {
+    .loader {
+        display: block;
+        position: absolute;
+        z-index: 999;
+        background: rgba(#000, 0.8);
+        width: 100vw;
+        height: 100vh;
+        .spinner {
+            background: yellowgreen;
+            height: 0.5rem;
+            position: absolute;
+            top: 0;
+            //transform: translateX(-50%)translateY(-50%);
+            animation: load 1s linear infinite;
+        }
+    }
+}
+
 body.ember-application {
-    &:before {
+    .loader {
         display: none;
-        content: "";
     }
 }

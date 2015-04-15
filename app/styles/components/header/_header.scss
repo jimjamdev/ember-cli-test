@@ -1,0 +1,24 @@
+.header {
+    // Flex
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    // Theme
+    background: rgba(#000, 0.8);
+    color: #ccc;
+    a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 1rem;
+    }
+    .logo {
+        flex-basis: 20%;
+    }
+    .menu {
+        flex-basis: 80%;
+        justify-content: flex-end;
+    }
+}

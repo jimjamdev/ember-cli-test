@@ -1,0 +1,21 @@
+.menu {
+    @extend %reset-list;
+    display: flex;
+    li {
+        @extend %reset-list;
+        position: relative;
+        a {
+            padding: 1rem;
+        }
+    }
+    // Dropdown
+    .dropdown-menu {
+        position: absolute;
+        visibility: hidden;
+        display: block;
+        background-color: rgba(#fff, 1);
+    }
+    .open .dropdown-menu {
+        visibility: visible;
+    }
+}

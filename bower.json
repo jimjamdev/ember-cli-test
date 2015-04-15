@@ -16,6 +16,7 @@
     "bootstrap-sass-official": "~3.3.4"
   },
   "devDependencies": {
-    "firebase-simple-login": "~1.6.4"
+    "firebase-simple-login": "~1.6.4",
+    "susy": "~2.2.2"
   }
 }

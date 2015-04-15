@@ -1,6 +1,48 @@
 @import 'base';
 
+*, *:before, *:after {
+    box-sizing: border-box;
+}
 
-.content-container {
-    min-height: 90vh;
+// Base set-up
+html, body {
+    margin:0;
+    padding:0;
+    background: $body-bg;
+    // Font defaults
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    @media screen and (min-width: 640px) {
+        font-size: 14px;
+    }
+    color: #999;
+    height: 100%;
+    min-height: 100%;
+}
+
+.container {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+h1 {
+    display: block;
+    font-weight: 100;
+    //background: rgba(#fff, 0.1);
+}
+
+a {
+    color: mediumturquoise;
+}
+header.header {
+
+}
+main {
+
+}
+
+footer.footer {
+    background: red;
 }
