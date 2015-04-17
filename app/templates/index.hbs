@@ -1,7 +1,21 @@
-<h1>Latest Listings</h1>
+<header class="page-header">
+    <h1>Latest Listings</h1>
+</header>
 
-<ul class="categories">
+<ul class="listings">
     {{#each listing in controller}}
-        <li>{{#link-to 'listing' listing class="item"}}<h3>{{listing.name}}</h3><br>&euro;{{listing.price}}{{/link-to}}</li>
+        <li class="listings-item">
+            <div class="listing">
+                {{#link-to 'listing' listing class="listing-image"}}
+                    <img src="/assets/images/default-image.jpg">
+                {{/link-to}}
+                <div class="listing-name">
+                    <h3>{{listing.name}}</h3>
+                </div>
+                <div class="listing-price">
+                    &euro;{{listing.price}}
+                </div>
+            </div>
+        </li>
     {{/each}}
 </ul>

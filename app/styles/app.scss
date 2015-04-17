@@ -6,41 +6,38 @@
 
 // Base set-up
 html, body {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     background: $body-bg;
     // Font defaults
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     @media screen and (min-width: 640px) {
         font-size: 14px;
     }
     color: #999;
-    height: 100%;
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 .container {
     max-width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-
-h1 {
-    display: block;
-    font-weight: 100;
-    //background: rgba(#fff, 0.1);
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 a {
     color: mediumturquoise;
 }
-header.header {
 
-}
-main {
-
+.page-container {
+    //min-height: calc(100vh - 20vh);
+    aside.sidebar {
+        display:none;
+        background: rgba(#000, 0.1);
+    }
+    main.main {
+        //flex:5;
+    }
 }
 
 footer.footer {

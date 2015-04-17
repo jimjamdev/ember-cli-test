@@ -1,10 +1,12 @@
 <header class="header">
-    {{#link-to 'index' class='logo'}}[ ]{{/link-to}}
+    {{#link-to 'index' class='logo'}}<img src="assets/images/logo.svg" height="25px" class="svg-logo">{{/link-to}}
     <ul class="menu text--right">
         <li>{{#link-to 'manage.new'}}Add Listing{{/link-to}}</li>
         {{#if session.authed}}
             <li>
-                <span class="dropdown-toggle" data-toggle="dropdown">{{google.displayName}}{{facebook.displayName}} {{#link-to 'logout'}}Logout{{/link-to}}</span>
+                <span class="dropdown-toggle"
+                      data-toggle="dropdown">{{google.displayName}}{{facebook.displayName}} {{#link-to 'logout'}}
+                    Logout{{/link-to}}</span>
                 <ul class="dropdown-menu" role="menu">
                     ...
                 </ul>
@@ -20,10 +22,20 @@
     </ul>
 </header>
 
-<main class="container">
+<div class="page-container">
 
-    {{liquid-outlet}}
+    <aside class="sidebar">
+        <h4>Categories</h4>
+    </aside>
+
+    <main class="main">
+        <div class="container">
+
+            {{liquid-outlet}}
 
 
-</main>
+        </div>
+    </main>
+
+</div>
 

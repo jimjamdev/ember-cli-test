@@ -15,10 +15,13 @@
         padding: 1rem;
     }
     .logo {
-        flex-basis: 20%;
+        flex:1;
+        #star-rate {
+            fill: #fff;
+        }
     }
     .menu {
-        flex-basis: 80%;
+        flex:6;
         justify-content: flex-end;
     }
 }
