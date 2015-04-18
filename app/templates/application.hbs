@@ -1,21 +1,36 @@
 <header class="header">
     {{#link-to 'index' class='logo'}}<img src="assets/images/logo.svg" height="25px" class="svg-logo">{{/link-to}}
-    <ul class="menu text--right">
+    <ul class="menu menu--right">
         <li>{{#link-to 'manage.new'}}Add Listing{{/link-to}}</li>
         {{#if session.authed}}
             <li>
-                <span class="dropdown-toggle"
-                      data-toggle="dropdown">{{google.displayName}}{{facebook.displayName}} {{#link-to 'logout'}}
-                    Logout{{/link-to}}</span>
+                <span class="dropdown-toggle" data-toggle="dropdown"><a>My Account</a></span>
                 <ul class="dropdown-menu" role="menu">
-                    ...
+                    <li>
+                        {{#link-to 'manage.new'}}Add Listing{{/link-to}}
+                    </li>
+                    <li>
+                        {{#link-to 'manage.listings'}}View my listings{{/link-to}}
+                    </li>
+                    <li>
+                        <a {{action 'logout'}}>Logout</a>
+                    </li>
                 </ul>
             </li>
         {{else}}
             <li>
-                <span class="dropdown-toggle" data-toggle="dropdown">{{#link-to 'login'}}Login{{/link-to}}</span>
+                <span class="dropdown-toggle" data-toggle="dropdown"><a>Login</a></span>
                 <ul class="dropdown-menu" role="menu">
-                    ...
+                    <li>
+                        <a {{action 'login' "google"}}>
+                            Sign in with Google
+                        </a>
+                    </li>
+                    <li>
+                        <a {{action 'login' "facebook"}}>
+                            Sign in with Facebook
+                        </a>
+                    </li>
                 </ul>
             </li>
         {{/if}}

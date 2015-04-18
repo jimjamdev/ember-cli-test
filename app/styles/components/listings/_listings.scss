@@ -13,13 +13,19 @@
         @include material-shadow(1);
         background: #fff;
         margin: 0 1% 1% 1%;
-        transition: 0.4s ease-in-out;
-        &:hover,:focus,&:active {
+        a {
+            text-decoration: none;
+        }
+        @-moz-document url-prefix() {
+            margin-bottom: 0.5rem; // Hack for Firefox margin bottom
+        }
+        transition: box-shadow 0.2s ease-in-out;
+        &:hover,&:focus {
             @include material-shadow(3);
             -webkit-user-select: none;
             -webkit-touch-callout: none;
         }
-        @media screen and (max-width: 640px) {
+        @include sm-only {
             flex-basis: 48.99999%;
             &:nth-of-type(2n+1) {
                 margin-left: 0;
@@ -28,7 +34,7 @@
                 margin-right: 0;
             }
         }
-        @media screen and (min-width: 640px) and (max-width: 720px) {
+        @include sm-md {
             flex-basis: 23.444444%;
             &:nth-of-type(4n+1) {
                 margin-left: 0;
@@ -37,7 +43,7 @@
                 margin-right: 0;
             }
         }
-        @media screen and (min-width: 720px) and (max-width: 1600px) {
+        @include md-lg {
             flex-basis: 14.99999%;
             &:nth-of-type(6n+1) {
                 margin-left: 0;
@@ -46,8 +52,17 @@
                 margin-right: 0;
             }
         }
-        @media screen and (min-width: 1600px) {
-            flex-basis: 9.33333%;
+        @include lg-xl {
+            flex-basis: 14.99999%;
+            &:nth-of-type(6n+1) {
+                margin-left: 0;
+            }
+            &:nth-of-type(6n) {
+                margin-right: 0;
+            }
+        }
+        @include xl {
+            flex-basis: 9.33333%;;
             &:nth-of-type(9n+1) {
                 margin-left: 0;
             }
@@ -62,7 +77,6 @@
             display: block;
             padding: 0.5rem;
             text-align: center;
-            transition: 0.5s ease-in-out;
             cursor: pointer;
             a {
                 text-decoration: none;

@@ -1,0 +1,97 @@
+$xs: 15rem;
+$sm: 35rem;
+$md: 50rem;
+$lg: 70rem;
+$xl: 100rem;
+
+// Extra Small
+@mixin xs {
+    @include susy-media($xs) {
+        @content;
+    }
+}
+
+@mixin xs-sm {
+    @include susy-media($xs $sm) {
+        @content;
+    }
+}
+@mixin xs-md {
+    @include susy-media($xs $md) {
+        @content;
+    }
+}
+@mixin xs-only {
+    @include susy-media(max-width $xs) {
+        @content;
+    }
+}
+// Small
+@mixin sm {
+    @include susy-media($sm) {
+        @content;
+    }
+}
+@mixin sm-md {
+    @include susy-media($sm $md) {
+        @content;
+    }
+}
+@mixin sm-only {
+    @include susy-media(max-width $sm) {
+        @content;
+    }
+}
+
+// medium
+@mixin md {
+    @include susy-media($md) {
+        @content;
+    }
+}
+@mixin md-lg {
+    @include susy-media($md $lg) {
+        @content;
+    }
+}
+
+// Large
+@mixin lg {
+    @include susy-media($lg) {
+        @content;
+    }
+}
+@mixin lg-xl {
+    @include susy-media($lg $xl) {
+        @content;
+    }
+}
+
+// Extra Large
+@mixin xl {
+    @include susy-media($xl) {
+        @content;
+    }
+}
+
+
+body {
+    h1 {
+        color: #fff;
+    }
+    @include xs-sm {
+        background-color: deeppink !important;
+    }
+    @include sm-md {
+        background-color: deepskyblue !important;
+    }
+    @include md-lg {
+        background-color: lightseagreen !important;
+    }
+    @include lg-xl {
+        background-color: yellowgreen !important;
+    }
+    @include xl {
+        background-color: orangered !important;
+    }
+}

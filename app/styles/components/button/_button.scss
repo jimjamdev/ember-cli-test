@@ -8,6 +8,7 @@ button, .btn {
     border-radius: 1px;
     border: 0 none;
     outline: none;
+    cursor: pointer;
     @include material-shadow(1);
     // Modifiers
     .btn--rounded {
