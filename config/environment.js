@@ -1,11 +1,13 @@
 /* jshint node: true */
 
+
 module.exports = function (environment) {
     var ENV = {
         modulePrefix: 'ember-cli-test',
         environment: environment,
         baseURL: '/',
         locationType: 'auto',
+        firebase: 'https://maltadz-production.firebaseio.com/',
         EmberENV: {
             FEATURES: {
                 // Here you can enable experimental features on an ember canary build
@@ -15,7 +17,7 @@ module.exports = function (environment) {
         contentSecurityPolicy: {
         'default-src': "'none'",
             'script-src': "'self'",
-            'font-src': "'self' 'http://fonts.gstatic.com/*",
+            'font-src': "'self' 'unsafe'",
             'connect-src': "'self' wss://*.firebaseio.com http://*.firebaseio.com",
             'img-src': "'self'",
             'style-src': "'self' 'unsafe-inline'",
@@ -25,18 +27,37 @@ module.exports = function (environment) {
         APP: {
             // Here you can pass flags/options to your application instance
             // when it is created
+        },
+
+        // Torri Login authentication
+        torii: {
+            // a 'session' property will be injected on routes and controllers
+            sessionServiceName: 'session',
+            providers: {
+                'facebook-oauth2': {
+                    apiKey:      '870451673026285',
+                    redirectUri: 'http://localhost:4200/manage'
+                },
+                'google-oauth2': {
+                    apiKey:      '793909324830-eakdn581je60jj3veuf3cho14rqqspl2.apps.googleusercontent.com',
+                    scope: 'email',
+                    redirectUri: 'http://localhost:4200/manage'
+                }
+            }
         }
     };
 
 
 
+
+
     if (environment === 'development') {
-        ENV.APP.LOG_RESOLVER = true;
-        ENV.APP.LOG_ACTIVE_GENERATION = true;
-        ENV.APP.LOG_TRANSITIONS = true;
-        ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-        ENV.APP.LOG_VIEW_LOOKUPS = true;
-        ENV.firebase = 'https://maltadz-production.firebaseio.com/';
+        //ENV.APP.LOG_RESOLVER = true;
+        //ENV.APP.LOG_ACTIVE_GENERATION = true;
+        //ENV.APP.LOG_TRANSITIONS = true;
+        //ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+        //ENV.APP.LOG_VIEW_LOOKUPS = true;
+        //ENV.firebase = 'https://maltadz-dev.firebaseio.com/';
     }
 
     if (environment === 'test') {
@@ -49,12 +70,12 @@ module.exports = function (environment) {
         ENV.APP.LOG_VIEW_LOOKUPS = false;
 
         ENV.APP.rootElement = '#ember-testing';
-        ENV.firebase = 'https://maltadz-production.firebaseio.com/';
+        //ENV.firebase = 'https://maltadz-dev.firebaseio.com/';
 
     }
 
     if (environment === 'production') {
-        ENV.firebase = 'https://maltadz-production.firebaseio.com/';
+        //ENV.firebase = 'https://maltadz-production.firebaseio.com/';
     }
 
     return ENV;
