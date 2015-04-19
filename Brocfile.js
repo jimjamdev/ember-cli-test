@@ -19,4 +19,6 @@ var app = new EmberApp();
 app.import('bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js');
 //app.import('bower_components/firebase-simple-login/firebase-simple-login.js');
 
+var packMediaQueries = require('broccoli-css-mqpacker');
+
 module.exports = app.toTree();

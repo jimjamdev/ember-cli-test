@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    //height: 3rem;
     // Theme
     background: rgba(#000, 0.6);
     color: #ccc;
@@ -16,9 +17,11 @@
         cursor: pointer;
     }
     .logo {
+        position: relative;
         flex:1;
-        #star-rate {
-            fill: #fff;
+        .svg-logo {
+            position: absolute;
+            top:0.15rem;
         }
     }
     .menu {

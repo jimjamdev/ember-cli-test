@@ -4,7 +4,7 @@
         <li>{{#link-to 'manage.new'}}Add Listing{{/link-to}}</li>
         {{#if session.isAuthenticated}}
             <li>
-                <span class="dropdown-toggle" data-toggle="dropdown"><a>{{currentUser}}My Account</a></span>
+                <span class="dropdown-toggle" data-toggle="dropdown"><a>{{session.content.userName}} My Account</a></span>
                 <ul class="dropdown-menu" role="menu">
                     <li>
                         {{#link-to 'manage.new'}}Add Listing{{/link-to}}

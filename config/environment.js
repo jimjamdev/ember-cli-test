@@ -17,10 +17,10 @@ module.exports = function (environment) {
         contentSecurityPolicy: {
         'default-src': "'none'",
             'script-src': "'self'",
-            'font-src': "'self' 'unsafe'",
-            'connect-src': "'self' wss://*.firebaseio.com http://*.firebaseio.com",
+            'font-src': "'self' http://*.gstatic.com http://*.googleapis.com",
+            'connect-src': "'self' wss://*.firebaseio.com http://*.firebaseio.com http://*.googleapis.com",
             'img-src': "'self'",
-            'style-src': "'self' 'unsafe-inline'",
+            'style-src': "'self' 'unsafe-inline' http://*.googleapis.com",
             'media-src': "'self'"
         },
 
@@ -40,9 +40,10 @@ module.exports = function (environment) {
                 },
                 'google-oauth2': {
                     apiKey:      '793909324830-eakdn581je60jj3veuf3cho14rqqspl2.apps.googleusercontent.com',
-                    scope: 'email',
+                    scope: 'profile email',
                     redirectUri: 'http://localhost:4200/manage'
                 }
+
             }
         }
     };
